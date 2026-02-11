@@ -1,0 +1,21 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-raw-types: true
+
+linter:
+  rules:
+    # Prefer const whenever possible
+    prefer_const_constructors: true
+    prefer_const_constructors_in_immutables: true
+    prefer_const_literals_to_create_immutables: true
+
+    # Enforce const correctness
+    unnecessary_const: true
+    avoid_unnecessary_containers: true
+
+    # Good Flutter hygiene
+    use_key_in_widget_constructors: true
+    immutable: true
