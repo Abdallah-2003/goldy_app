@@ -1,4 +1,1 @@
-abstract class AppIcons {
-
-  
-}
+abstract class AppIcons {}

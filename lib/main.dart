@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:goldy_app/core/networking/dio_helper.dart';
 import 'package:goldy_app/core/routing/app_router.dart';
 import 'package:goldy_app/core/routing/routes.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await DioHelper.init();
   runApp(const MyApp());
 }
 
@@ -11,13 +14,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-     
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      initialRoute: AppRoutes.homeScreen,
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: AppRoutes.homeView,
       onGenerateRoute: AppRouter.generateRoute,
     );
   }

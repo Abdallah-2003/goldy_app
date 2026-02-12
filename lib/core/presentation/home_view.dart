@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:goldy_app/core/constant/app_colors.dart';
 import 'package:goldy_app/core/constant/app_strings.dart';
+import 'package:goldy_app/core/routing/routes.dart';
 import 'package:goldy_app/core/widgets/custom_bottom.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,18 +16,18 @@ class HomeScreen extends StatelessWidget {
         spacing: 20,
         children: [
           CustomBottom(
-            text: AppStrings.gold, 
+            text: AppStrings.gold,
             onPressed: () {
-              
-            }, 
-            color: AppColors.goldColor
+              Navigator.pushNamed(context, AppRoutes.goldView);
+            },
+            color: AppColors.goldColor,
           ),
           CustomBottom(
-            text: AppStrings.silver, 
+            text: AppStrings.silver,
             onPressed: () {
-              
-            }, 
-            color: AppColors.silverColor
+              Navigator.pushNamed(context, AppRoutes.silverView);
+            },
+            color: AppColors.silverColor,
           ),
         ],
       ),

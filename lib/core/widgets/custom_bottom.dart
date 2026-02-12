@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomBottom extends StatelessWidget {
-  const CustomBottom({super.key, required this.text, required this.onPressed, required this.color});
+  const CustomBottom({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    required this.color,
+  });
 
   final String text;
   final void Function()? onPressed;
@@ -16,19 +21,14 @@ class CustomBottom extends StatelessWidget {
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all(color),
             shape: WidgetStateProperty.all(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(14),
-              ),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),
           onPressed: onPressed,
           child: Text(
             text,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w500
-            ),
+            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
           ),
         ),
       ),
